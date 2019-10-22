@@ -7,33 +7,24 @@ import { CharService } from './char.service';
 
 @Component({
   selector: 'app-chars',
-  templateUrl: './chars.component.html',
+  //template: `{{title}} `,
+  templateUrl: 'chars.component.html',
   styleUrls: ['./chars.component.sass'],
   providers: [CharService]
 })
-export class CharsComponent implements OnInit {
-	title= 'Storganizer';
-	selectedChar: Char;
+// export class CharsComponent implements OnInit {
+export class CharsComponent {
+	title: string;
+	myChar: string;
 
-	chars: Char[];
+  constructor() {
+  	this.title = 'organizer';
+  	this.myChar= 'Marissa Martinez';
 
-  class constructor(private charService: CharService) {
-
-  	this.getChars(): void{
-  		this.charService.getChars().then(chars => this.chars = chars)
-  	}
-
-  	this.ngOnInit(): void { 
-  		this.getChars()
-  	}
-
-  	onselect(char: Char): void {
-  		this.selectedChar = char;
-  	}
 
   }
 
-  ngOnInit() {
-  }
+  // ngOnInit() {
+  // }
 
 }
