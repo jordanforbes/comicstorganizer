@@ -1,10 +1,10 @@
 import { Char } from './char';
 
-export const CHARS: Char[]={
+export const CHAR: Char[]=[ 
 	{id:1, 
 	name: "Melissa Martinez", 
 	gender: "Female", 
 	image: "/assets/melissa.jpg",
-	description: "gross anime nerd girl"
+	description: "gross anime nerd"
 	}
-}
+]
